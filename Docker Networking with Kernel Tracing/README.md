@@ -42,11 +42,11 @@ Our goal is to establish a connection between the host machine and a container. 
 
 The host loopback tracing is as followed:
 
-![host base perf count](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Base/nc%20perf%20count.png)
+![host base perf count](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Base/nc%20perf%20count.png)
 
 Moreover, the Docker tracing:
 
-![UDB perf count](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/ncscript_perf_udb.png)
+![UDB perf count](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/ncscript_perf_udb.png)
 
 We can see that there is no significant difference between the two. But let's delve into one of the events; _netif_rx_.
 
@@ -56,7 +56,7 @@ Using perf, we record the related stack of both.
 sudo perf record -ae 'net:*' --call-graph fp
 ```
 
-![perf UDB compare stack](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/perf_stack%20comparison.png)
+![perf UDB compare stack](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/perf_stack%20comparison.png)
 
 > both stacks are in _sending phase_
 
@@ -68,7 +68,7 @@ When a Docker container sends TCP packets to the host, these packets traverse th
 
 Also, looking at the function graph, we can see the order of function calls:
 
-![function graph UDB compare stack](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/UDB_functiongraph.png)
+![function graph UDB compare stack](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/UDB/UDB_functiongraph.png)
 
 It is also worth mentioning that the _br_forward_ related set of function calls have an extra cumulative time of **3 us** in **docker=>netcat** process . This information would come handy when we compare it with the same scenario in our host loopback tracing; and this is only one tiny part of the added overhead.
 
@@ -92,13 +92,13 @@ sudo docker run -itd --rm --network networkName --ip x.x.x.x --name containerNam
 
 > The given IPs are new and not used in the system.
 
-![IPVLAN L2 docker ps](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_Dockerps.jpg)
+![IPVLAN L2 docker ps](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_Dockerps.jpg)
 
 If we use VM, we are also able to ping our VM container from own computer and demonstrate the shared MAC address:
 
-![vm Mac](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_addshMac.png)
+![vm Mac](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_addshMac.png)
 
-![host ping/mac](https://github.com/ShamsAli-fathi/SideProjects/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_cmd_ping.png)
+![host ping/mac](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/IPVLAN2_cmd_ping.png)
 
 Then we proceed to run 2 **ubuntu:20.04** containers in the same network. The goal is to send TCP packets between them and trace the result.
 
