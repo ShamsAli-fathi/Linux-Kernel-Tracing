@@ -16,11 +16,14 @@
 
 ## Table of Contents
 
-[1. Kernel Net Tracing](https://github.com/ShamsAli-fathi/SideProjects/tree/main/Kernel%20Net%20Tracing) <br />
-[2. Kernel Network Stack Code Inspection](https://github.com/ShamsAli-fathi/SideProjects/tree/main/Kernel%20Network%20Stack%20Code%20Inspection) <br />
-[3. Queue Simulator - Performance Evaluation](https://github.com/ShamsAli-fathi/SideProjects/tree/main/Queue%20Simulator%20-%20Performance%20Evaluation)
+[1. Kernel Net Tracing](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/Kernel%20Net%20Tracing) <br />
+[2. Kernel Network Stack Code Inspection](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/Kernel%20Network%20Stack%20Code%20Inspection) <br />
+[3. Docker Networking with Kernel Tracing](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/Docker%20Networking%20with%20Kernel%20Tracing)
 
 ### Description
 
-I will be covering different computer-driven topics and turning them into my own **side projects**.
-I try to tackle fun challanges and go in-depth in this repo.
+In this repo, I will be covering different Linux Kernel Tracing topics. I try to tackle different challanges and go in-depth. All related tracing projects are put in different directories!
+
+https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/Docker%20Networking%20with%20Kernel%20Tracing
+
+https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/Kernel%20Net%20Tracing
