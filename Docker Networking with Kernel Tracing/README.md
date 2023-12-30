@@ -152,7 +152,7 @@ We run 2 experiments: one being an **intra-host ping** and the other being and *
 
 In order to analyze and compare these two experiments, we record a **perf stack**:
 
-![overlay stack compare](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/IPVLAN2/overlay_base_docker_stack_compare_startxmit.png)
+![overlay stack compare](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Overlay/overlay_base_docker_stack_compare_startxmit.png)
 
 We can now see how overlay network works. Based on this comparison and considering the number of calls to the **br_nf_forward** method and its purpose, we realize that despite the apparent connection of all containers on different Docker hosts to a common bridge and the communication between them being purely Layer 2 through a shared ARP table, the implementation of this method is different.
 
