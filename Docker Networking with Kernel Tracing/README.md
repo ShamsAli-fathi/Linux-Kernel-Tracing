@@ -1,5 +1,3 @@
-# STILL IN PROGRESS / NOT COMPLETE
-
 # Description
 
 In this project, my goal is to employ tracing techniques to analyze the functionality of distinct Docker networking modes. Subsequently, I intend to assess and trace each mode using Linux tracing tools.
