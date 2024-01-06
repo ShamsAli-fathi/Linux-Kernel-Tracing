@@ -1,0 +1,28 @@
+#!/usr/bin/env bpftrace
+
+BEGIN
+{
+    printf("Tracing execution time between function1 entry and function2 return... Hit Ctrl-C to end.\n");
+}
+
+kprobe:net_rx_action
+{
+    @start[tid] = nsecs;
+}
+
+kretprobe:netif_rx_internal
+{
+    if (@start[tid])
+    {
+        $delta = nsecs - @start[tid];
+	printf("Execution time between function1 entry and function2 return: %lu us\n", $delta / 1000);
+        @time_hist = hist($delta / 1000);
+        delete(@start[tid]);
+    }
+}
+
+END
+{
+    print(@time_hist);
+    clear(@start);
+}

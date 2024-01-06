@@ -162,6 +162,12 @@ In simpler terms, despite the appearance of all containers being connected to a 
 
 ### Bpftrace overhead evaluation
 
+By writing a simple **Bpftrace**, we can now attach _kprobes_ to our function calls:
+
+In our own scenario, by comparing the exported perf stack and using ftrace function graph, we decide our function kprobes.
+
+During a 20-second intra-contrainer pinging, we can at last export a time histogram; calculating the time it takes to send one ping message.
+
 ## Acknowledgments/References
 
 - [Deep Linux](https://www.youtube.com/@deeplinux2248)
