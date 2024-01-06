@@ -164,7 +164,13 @@ In simpler terms, despite the appearance of all containers being connected to a 
 
 By writing a simple **Bpftrace**, we can now attach _kprobes_ to our function calls:
 
+![Bpftrace script](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Overlay/hist_bpftrace.png)
+
+> The script is located [here](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Overlay/hist.bt)
+
 In our own scenario, by comparing the exported perf stack and using ftrace function graph, we decide our function kprobes.
+
+![Bpftrace report](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/blob/main/Docker%20Networking%20with%20Kernel%20Tracing/src/Overlay/Screenshot%20from%202023-12-31%2015-20-44.png)
 
 During a 20-second intra-contrainer pinging, we can at last export a time histogram; calculating the time it takes to send one ping message.
 
