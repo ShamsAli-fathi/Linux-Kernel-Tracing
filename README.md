@@ -22,4 +22,4 @@
 
 ### Description
 
-In this repo, I will be covering different Linux Kernel Tracing topics. I try to tackle different challanges and go in-depth. All related tracing projects are put in different directories!
+In this repo, I will be covering different Linux Kernel Tracing topics that are mainly focused on Networking. I try to tackle different challanges and go in-depth. All related tracing projects are put in different directories!
