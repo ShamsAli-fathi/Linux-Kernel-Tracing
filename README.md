@@ -8,7 +8,7 @@
   <h3 align="center">Linux Tracing Projects</h3>
 
   <p align="center">
-    A repo for Linux enthusiasts!
+    A repo for Linux and Computer Network enthusiasts !
     <br />
     <a href="linkedin.com/in/ali-fathi-vafegh-84bb0a274/">My Linkedin</a>
   </p>
