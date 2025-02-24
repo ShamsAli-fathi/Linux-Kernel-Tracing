@@ -23,10 +23,10 @@ In contrast, a UDP scan involves sending UDP packets to target ports. Since UDP 
 
 For example, the default MTU for Ethernet networks is typically 1500 bytes. If a packet exceeds the MTU of the network, it may be fragmented into smaller packets, which can affect performance. Adjusting MTU settings can optimize network performance and reduce overhead in specific network configurations.
 
-> Using a tool of your choice (e.g., Ping), send a payload larger than the specified MTU value. The goal is to trigger fragmentation.
+- Using a tool of your choice (e.g., Ping), send a payload larger than the specified MTU value. The goal is to trigger fragmentation.
 
-> Trace the process with LTTng and visualize the results using TraceCompass.
+- Trace the process with LTTng and visualize the results using TraceCompass.
 
-> Clearly demonstrate how fragmentation appears in the trace.
+- Clearly demonstrate how fragmentation appears in the trace.
 
-> Can you also determine the length of the transmitted message in TraceCompass by analyzing the provided tracing events?
+- Can you also determine the length of the transmitted message in TraceCompass by analyzing the provided tracing events?
