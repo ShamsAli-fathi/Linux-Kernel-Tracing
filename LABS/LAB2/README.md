@@ -10,7 +10,7 @@ The goal is to gain a comprehensive understanding of the **`struct net_device`**
 - Locate the struct net_device Definition
 - Examine the struct net_device Structure
 - Understand Device Operations (`netdev_ops`)
-- *OPTIONAL*: monitor the nested function calls related to struct net_device
+- monitor the nested function calls related to struct net_device
 
 **HINT**: The Optional task requires *perf* or *ftrace*. *ftrace* is recommended. 
 
