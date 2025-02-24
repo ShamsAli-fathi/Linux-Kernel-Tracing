@@ -15,3 +15,4 @@
 ## Table of Contents
 
 [1. LAB 1](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/LABS/LAB1) <br />
+[1. LAB 2](https://github.com/ShamsAli-fathi/Linux-Kernel-Tracing/tree/main/LABS/LAB2) <br />
