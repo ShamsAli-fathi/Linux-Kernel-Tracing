@@ -12,7 +12,7 @@ The goal is to gain a comprehensive understanding of the **`struct net_device`**
 - Understand Device Operations (`netdev_ops`)
 - monitor the nested function calls related to struct net_device
 
-**HINT**: The Optional task requires *perf* or *ftrace*. *ftrace* is recommended. 
+**HINT**: The task requires *perf* or *ftrace*. *ftrace* is recommended. 
 
 ## Assignment 2
 The goal is to measure and analyze the latency involved in **packet processing** within the Linux kernel using LTTng; the time between *packet transmission* and *reception*
